@@ -1,11 +1,9 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import ErrorPage from "./ErrorPage";
-import Homepage from "./Homepage";
+import Homepage from "./Homepage/Homepage";
 import Test from "./Test";
 
 function App() {
-
-
   return (
     <Router>
       <Routes>
