@@ -6,6 +6,7 @@ const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
 const UserModel = require('./models/Users');
+const LoginModel = require('./models/Login');
 
 const cors = require('cors');
 
@@ -30,6 +31,14 @@ app.post("/User", async (req, res) => {
     await newUser.save();
 
     res.json(user);
+});
+
+app.post("/login", async (req, res) => {
+    const login = req.body;
+    const newLogin = new LoginModel(login);
+    await newLogin.save();
+
+    res.json(login);
 });
 
 app.listen(3001, () => {
