@@ -9,21 +9,21 @@ function LoginPage() {
               <h4 className="sub-heading">We're so excited to see you again!</h4>
             </header>
             <div className="fields">
-              <div className="input-block">
+              <field className="input-container input-container-margin">
                 <label className="label">Email or Phone Number</label>
                 <input className="input"></input>
-              </div>
-              <div className="password">
+              </field>
+              <field className="input-container">
                 <label className="label">Password</label>
                 <input className="input"></input>
-              </div>
-              <div className="forgot">Forgot your password?</div>
+              </field>
+              <div className="forgot link">Forgot your password?</div>
               <button className="login">
                 <div className="login-text">Log In</div>
               </button>
-              <div className="margin-top4">
-                <span>Need an account?</span>
-                <div className="register">Register</div>
+              <div className="register-container">
+                Need an account?
+                <span className="register link">Register</span>
               </div>
             </div>
           </section>

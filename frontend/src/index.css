@@ -19,3 +19,7 @@ html, body, #root {
 .justify {
     justify-content: center;
 }
+
+.link:hover {
+    text-decoration: underline;
+}

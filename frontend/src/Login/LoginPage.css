@@ -1,5 +1,5 @@
 .background {
-	background-color: cornflowerblue;
+	background-color: #5865f2;
 	height: 100%;
 }
 
@@ -43,9 +43,12 @@ header {
 	margin-top: 20px;
 }
 
-.input-block {
+.input-container {
 	display: flex;
 	flex-direction: column;
+}
+
+.input-container-margin {
 	margin-bottom: 20px;
 }
 
@@ -55,7 +58,6 @@ header {
 	font-size: 12px;
 	margin-bottom: 8px;
 	color: rgb(185, 187, 190);
-	
 	text-transform: uppercase;
 }
 
@@ -109,7 +111,7 @@ header {
 	color: white;
 }
 
-.margin-top4 {
+.register-container {
 	font-family: Whitney, "Helvetica Neue", Helvetica, Arial, sans-serif;
 	margin-top: 4px;
 	color: rgb(163, 166, 170);
@@ -117,10 +119,13 @@ header {
 }
 
 .register {
-	display: inline-block;
 	margin-left: 4px;
 	color: rgb(0, 175, 244);
 	cursor: pointer;
+}
+
+.register:hover {
+	
 }
 
 /*Right side*/
