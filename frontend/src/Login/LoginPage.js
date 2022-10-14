@@ -1,5 +1,5 @@
-import "./Homepage.css";
-function Homepage() {
+import "./LoginPage.css";
+function LoginPage() {
   return (
     <div className="background flex align justify ">
       <form className="login-form">
@@ -37,4 +37,4 @@ function Homepage() {
   )
 }
 
-export default Homepage;
+export default LoginPage;
