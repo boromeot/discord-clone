@@ -2,11 +2,23 @@ import "./LoginPage.css";
 import { useState } from "react";
 function LoginPage() {
 
-  const [username, setUsername] = useState("");
+  const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  function login() {
-    
+  const login = async e => {
+    e.preventDefault();
+    console.log('login clicked');
+    const res = await fetch('http://localhost:3001/Login', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        email,
+        password
+      })
+    }); 
+
+    const data = await res.json();
+    console.log(data);
   }
 
 	return (
@@ -23,7 +35,7 @@ function LoginPage() {
                 Email or Phone Number 
                 <span className="required">*</span>
               </label>
-							<input className="input" onChange={e => {setUsername(e.target.value)}}></input>
+							<input className="input" onChange={e => {setEmail(e.target.value)}}></input>
 						</div>
 						<div className="input-container">
 							<label className="label">
@@ -33,7 +45,7 @@ function LoginPage() {
 							<input className="input" onChange={e => {setPassword(e.target.value)}}></input>
 						</div>
 						<div className="forgot link login-font">Forgot your password?</div>
-						<button className="login">
+						<button className="login" onClick={e => {login(e)}}>
 							<div className="login-font">Log In</div>
 						</button>
 						<div className="register-container">
