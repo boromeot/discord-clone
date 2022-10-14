@@ -1,5 +1,14 @@
 import "./LoginPage.css";
+import { useState } from "react";
 function LoginPage() {
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
+  function login() {
+    
+  }
+
 	return (
 		<div className="background">
 			<form className="login-form">
@@ -9,20 +18,20 @@ function LoginPage() {
 						<h4 className="sub-heading ">We're so excited to see you again!</h4>
 					</header>
 					<div className="fields">
-						<field className="input-container input-container-margin">
+						<div className="input-container input-container-margin">
 							<label className="label"> 
                 Email or Phone Number 
                 <span className="required">*</span>
               </label>
-							<input className="input"></input>
-						</field>
-						<field className="input-container">
+							<input className="input" onChange={e => {setUsername(e.target.value)}}></input>
+						</div>
+						<div className="input-container">
 							<label className="label">
                 Password
                 <span className="required">*</span>
               </label>
-							<input className="input"></input>
-						</field>
+							<input className="input" onChange={e => {setPassword(e.target.value)}}></input>
+						</div>
 						<div className="forgot link login-font">Forgot your password?</div>
 						<button className="login">
 							<div className="login-font">Log In</div>
