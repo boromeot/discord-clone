@@ -1,12 +1,13 @@
-.background {
+.regsiterpage {
   display: flex;
   justify-content: center;
   align-items: center;
   font-family: var(--font-secondary);
 }
 
-.register-form {
+.register {
   border: 1px red solid;
+  border-radius: 3px;
   width: 480px;
   padding: 32px;
   font-size: 18px;
@@ -14,22 +15,21 @@
   background-color: #36393f;
 }
 
-.header {
+.register-header {
   color: white;
   font-size: 25px;
   line-height: 30px;
 }
 
 /* Main */
-.main {
+.register-main {
   text-align: left;
   width: 100%;
-  border: 1px purple solid;
   margin-top: 20px;
   color: rgb(185, 187, 190);
 }
 
-.margin-bottom20 {
+.register-mb20 {
   margin-bottom: 20px;
 }
 
@@ -40,4 +40,14 @@ label {
   line-height: 16px;
   font-weight: 600;
   text-transform: uppercase;
+}
+
+input {
+  height: 40px;
+  padding: 10px;
+  width: 100%;
+  background-color: rgb(32, 34, 37);
+  border: none;
+  border-radius: 3px;
+  color: rgb(220, 221, 222);
 }
