@@ -44,9 +44,9 @@ function LoginPage() {
               </label>
 							<input className="input" onChange={e => {setPassword(e.target.value)}}></input>
 						</div>
-						<div className="forgot link login-font">Forgot your password?</div>
+						<div className="forgot link">Forgot your password?</div>
 						<button className="login" onClick={e => {login(e)}}>
-							<div className="login-font">Log In</div>
+							<div>Log In</div>
 						</button>
 						<div className="register-container">
 							Need an account?

@@ -85,24 +85,23 @@ header {
 	border: none;
 }
 
-.input:active {
-	border: none;
+.input:focus {
+	outline: none;
 }
 
 .forgot {
 	color: rgb(0, 175, 244);
 	cursor: pointer;
 	display: inline-block;
+	font-size: 14px;
 	margin-top: 6px;
 	margin-bottom: 22px;
 }
 
-.login-font {
-	font-size: 14px;
-	font-weight: 500;
-}
-
 .login {
+	font-size: 16px;
+	font-weight: 500;
+	font-family: var(--font-primary);
 	display: flex;
 	justify-content: center;
 	align-items: center;
