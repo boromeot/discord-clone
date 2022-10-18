@@ -1,6 +1,7 @@
 import "./LoginPage.css";
 import { useState } from "react";
-function LoginPage() {
+
+const LoginPage = () => {
 
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -18,8 +19,7 @@ function LoginPage() {
     }); 
 
     const data = await res.json();
-    console.log(data);
-  }
+	}
 
 	return (
 		<div className="background">

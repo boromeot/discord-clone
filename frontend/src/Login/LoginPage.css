@@ -7,11 +7,6 @@
 }
 
 /* MAIN Section */
-.main {
-	display: flex;
-	flex-direction: column;
-	flex-grow: 1;
-}
 
 .login-form {
 	display: flex;
@@ -20,8 +15,14 @@
 	font-family: var(--font-primary);
 	font-size: 18px;
 	border-radius: 5px;
-	background-color: hsl(220,calc(var(--saturation-factor, 1)*7.7%),22.9%);
+	background-color: #36393f;
 	box-shadow: 0 2px 10px 0 hsla(0,calc(var(--saturation-factor, 1)*0%),0%,.2);
+}
+
+.main {
+	display: flex;
+	flex-direction: column;
+	flex-grow: 1;
 }
 
 /* HEADER */
@@ -83,10 +84,6 @@ header {
 	height: 40px;
 	border-radius: 3px;
 	border: none;
-}
-
-.input:focus {
-	outline: none;
 }
 
 .forgot {

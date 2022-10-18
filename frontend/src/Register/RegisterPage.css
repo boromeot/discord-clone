@@ -1,0 +1,43 @@
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--font-secondary);
+}
+
+.register-form {
+  border: 1px red solid;
+  width: 480px;
+  padding: 32px;
+  font-size: 18px;
+  text-align: center;
+  background-color: #36393f;
+}
+
+.header {
+  color: white;
+  font-size: 25px;
+  line-height: 30px;
+}
+
+/* Main */
+.main {
+  text-align: left;
+  width: 100%;
+  border: 1px purple solid;
+  margin-top: 20px;
+  color: rgb(185, 187, 190);
+}
+
+.margin-bottom20 {
+  margin-bottom: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
