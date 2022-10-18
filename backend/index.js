@@ -8,6 +8,7 @@ const mongoose = require('mongoose');
 const UserModel = require('./models/Users');
 const LoginModel = require('./models/Login');
 
+const bcrypt = require('bcrypt');
 const cors = require('cors');
 
 app.use(express.json());
@@ -34,7 +35,14 @@ app.post("/User", async (req, res) => {
 });
 
 app.post("/login", async (req, res) => {
-    const login = req.body;
+    let {email, password} = req.body;
+
+    const salt = bcrypt.genSaltSync(10);
+    const hash = bcrypt.hashSync(password, salt);
+    const login = {
+        email,
+        hashedPassword: hash
+    }
     const newLogin = new LoginModel(login);
     await newLogin.save();
 
