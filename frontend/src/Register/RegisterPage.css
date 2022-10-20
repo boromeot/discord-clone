@@ -134,3 +134,20 @@
 .year {
   width: 30%;
 }
+
+/* button */
+.margintop20 {
+  margin-top: 20px;
+}
+
+.register-button {
+  color: white;
+  background-color: rgb(88, 101, 242);
+  width: 100%;
+  min-width: 130px;
+  min-height: 44px;
+  border: none;
+  border-radius: 3px;
+  padding: 2px 16px;
+  font-size: 16px;
+}

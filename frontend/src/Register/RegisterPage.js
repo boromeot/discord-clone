@@ -51,6 +51,11 @@ const RegisterPage = () => {
               <Select className="year register-select"/>
             </div>
           </fieldset>
+          <div className="margintop20">
+            <button className="register-button">
+              <div>Continue</div>
+            </button>
+          </div>
         </section>
       </form>
     </div>
