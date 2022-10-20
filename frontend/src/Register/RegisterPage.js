@@ -59,6 +59,7 @@ const RegisterPage = () => {
         </section>
       </form>
     </div>
+    
   )
 }
 
