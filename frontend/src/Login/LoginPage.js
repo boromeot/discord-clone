@@ -42,7 +42,7 @@ const LoginPage = () => {
                 Password
                 <span className="login-required">*</span>
               </label>
-							<input className="login-input" onChange={e => {setPassword(e.target.value)}}></input>
+							<input className="login-input" onChange={e => {setPassword(e.target.value)}} type="password"></input>
 						</div>
 						<div className="login-forgot link">Forgot your password?</div>
 						<button className="login-button" onClick={e => {login(e)}}>
