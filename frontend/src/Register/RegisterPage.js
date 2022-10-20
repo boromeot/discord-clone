@@ -1,5 +1,6 @@
 import "./RegisterPage.css";
 import Chevron from "../SVGs/Chevron";
+import { useState } from "react";
 
 const Select = ({ className }) => {
   return (
@@ -18,6 +19,13 @@ const Select = ({ className }) => {
 }
 
 const RegisterPage = () => {
+  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('');
+  const [email, setEmail] = useState('');
+  const [month, setMonth] = useState('');
+  const [day, setDay] = useState('');
+  const [year, setYear] = useState('');
+
   return (
     <div className="regsiterpage">
       <form className="register">
@@ -25,15 +33,15 @@ const RegisterPage = () => {
         <section className="register-main">
           <div className="register-mb20">
             <label className="register-label">Email</label>
-            <input className="register-input" />
+            <input className="register-input" onChange={e => {setEmail(e.target.value)}} value={email}/>
           </div>
           <div className="register-mb20">
             <label className="register-label">Username</label>
-            <input className="register-input" />
+            <input className="register-input" onChange={e => {setUsername(e.target.value)}} value={username}/>
           </div>
           <div className="register-mb20">
             <label className="register-label">Password</label>
-            <input className="register-input" type="password"/>
+            <input className="register-input" onChange={e => {setPassword(e.target.value)}} value={password} type="password"/>
           </div>
           <fieldset> 
             <legend className="register-label">Date of birth</legend>
