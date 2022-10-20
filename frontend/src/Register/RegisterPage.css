@@ -59,14 +59,11 @@
   display: flex;
   justify-content: space-between;
   margin-bottom: 4px;
-}
-
-.temp {
   font-size: 16px;
   font-weight: 500;
 }
 
-.temp2 {
+.select-option {
   background-color: var(--input-background);
   border: 1px solid var(--input-background);
   border-radius: 4px;
@@ -79,7 +76,7 @@
   transition: border 0.15s ease 0s;
 }
 
-.temp3 {
+.select-textWrapper {
 	-moz-box-align: center;
 	align-items: center;
 	display: flex;
@@ -91,7 +88,7 @@
 	overflow: hidden;
 }
 
-.single {
+.select-text {
   color: rgb(185, 187, 190);
   margin-left: 4px;
   margin-right: 2px;
@@ -114,6 +111,16 @@
 	padding: 0px;
 	color: inherit;
   position: absolute;
+}
+
+.select-chevron {
+  fill: currentColor;
+	display: flex;
+	padding: 8px 8px 8px 0px;
+	transition: color 150ms ease 0s;
+	box-sizing: border-box;
+	cursor: pointer;
+	opacity: 1;
 }
 
 .month {

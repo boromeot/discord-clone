@@ -1,15 +1,16 @@
 import "./RegisterPage.css";
+import Chevron from "../SVGs/Chevron";
 
 const Select = ({ className }) => {
   return (
     <div className={className}>
-      <div className="temp">
-        <div className="temp2">
-          <div className="temp3">
-            <div className="single">Janurary</div>
-            <input className="select-input"/>
-          </div>
-          <div></div>
+      <div className="select-option">
+        <div className="select-textWrapper">
+          <div className="select-text">Janurary</div>
+          <input className="select-input"/>
+        </div>
+        <div className="select-chevron">
+          <Chevron />
         </div>
       </div>
     </div>
@@ -37,9 +38,9 @@ const RegisterPage = () => {
           <fieldset> 
             <legend className="register-label">Date of birth</legend>
             <div className="register-dropdowns">
-              <Select className="month"/>
-              <Select className="day"/>
-              <Select className="year"/>
+              <Select className="month register-select"/>
+              <Select className="day register-select"/>
+              <Select className="year register-select"/>
             </div>
           </fieldset>
         </section>
