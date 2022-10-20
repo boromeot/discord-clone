@@ -22,35 +22,35 @@ const LoginPage = () => {
 	}
 
 	return (
-		<div className="background">
-			<form className="login-form">
-				<section className="main">
+		<div className="loginpage">
+			<form className="loginform">
+				<section className="login">
 					<header>
-						<h1 className="heading">Welcome back!</h1>
-						<h4 className="sub-heading ">We're so excited to see you again!</h4>
+						<h1 className="login-heading">Welcome back!</h1>
+						<h4 className="login-subheading ">We're so excited to see you again!</h4>
 					</header>
-					<div className="fields">
-						<div className="input-container input-container-margin">
-							<label className="label"> 
+					<div className="login-fields">
+						<div className="login-inputBlock">
+							<label className="login-label"> 
                 Email or Phone Number 
-                <span className="required">*</span>
+                <span className="login-required">*</span>
               </label>
-							<input className="input" onChange={e => {setEmail(e.target.value)}}></input>
+							<input className="login-input" onChange={e => {setEmail(e.target.value)}}></input>
 						</div>
-						<div className="input-container">
-							<label className="label">
+						<div className="login-inputBlock">
+							<label className="login-label">
                 Password
-                <span className="required">*</span>
+                <span className="login-required">*</span>
               </label>
-							<input className="input" onChange={e => {setPassword(e.target.value)}}></input>
+							<input className="login-input" onChange={e => {setPassword(e.target.value)}}></input>
 						</div>
-						<div className="forgot link">Forgot your password?</div>
-						<button className="login" onClick={e => {login(e)}}>
+						<div className="login-forgot link">Forgot your password?</div>
+						<button className="login-button" onClick={e => {login(e)}}>
 							<div>Log In</div>
 						</button>
-						<div className="register-container">
+						<div className="login-register">
 							Need an account?
-							<span className="register link">Register</span>
+							<span className="login-registerlink link">Register</span>
 						</div>
 					</div>
 				</section>
