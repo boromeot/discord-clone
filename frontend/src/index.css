@@ -1,3 +1,8 @@
+:root {
+    --font-primary: "Whitney Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    --font-secondary: "ABC Ginto Normal", "Helvetica Neue", Helvetica, Arial, sans-serif; 
+    --input-background: rgb(32, 34, 37);
+}
 * {
     margin: 0;
     padding: 0;
@@ -18,4 +23,16 @@ html, body, #root {
 
 .justify {
     justify-content: center;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+fieldset {
+    border: none;
+}
+
+input:focus {
+	outline: none;
 }
