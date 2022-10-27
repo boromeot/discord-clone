@@ -56,6 +56,9 @@ const RegisterPage = () => {
               <div>Continue</div>
             </button>
           </div>
+          <div className="margintop20">
+            <div className="register-loginlink link">Already have an account?</div>
+          </div>
         </section>
       </form>
     </div>
