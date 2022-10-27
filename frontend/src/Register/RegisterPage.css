@@ -160,12 +160,40 @@
 /*       */
 
 .dropdown {
+  background-color: rgb(47, 49, 54);
   position: absolute;
   bottom: 100%;
-  border: 2px red solid;
   border-radius: 0 0 4px 4px;
   width: inherit;
   max-height: 215px;
   height: 500px;
   overflow-y: auto;
+}
+
+.dropdown::-webkit-scrollbar
+{
+  width: 5px;  /* for vertical scrollbars */
+  height: 5px; /* for horizontal scrollbars */
+}
+
+.dropdown::-webkit-scrollbar-thumb
+{
+  border-radius: 5px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.dropdown-option {
+  background-color: var(--background-modifier-hover);
+  color: var(--interactive-hover);
+  cursor: pointer;
+  display: flex;
+  font-size: inherit;
+  padding: 12px;
+  width: 100%;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  box-sizing: border-box;
+  -webkit-box-align: center;
+  align-items: center;
+  min-height: 40px;
 }

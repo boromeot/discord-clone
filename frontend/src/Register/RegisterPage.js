@@ -17,7 +17,15 @@ const Select = ({ className }) => {
           </div>
         </div>
         <div className="dropdown">
-        
+          <div className="dropdown-option">Janurary</div>
+          <div className="dropdown-option">Janurary</div>
+          <div className="dropdown-option">Janurary</div>
+          <div className="dropdown-option">Janurary</div>
+          <div className="dropdown-option">Janurary</div>
+          <div className="dropdown-option">Janurary</div>
+          <div className="dropdown-option">Janurary</div>
+          <div className="dropdown-option">Janurary</div>
+          <div className="dropdown-option">Janurary</div>
         </div>
       </div>
       
