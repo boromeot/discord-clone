@@ -25,13 +25,13 @@ html, body, #root {
     justify-content: center;
 }
 
-.link {
+a {
     color: rgb(0, 175, 244);
+    text-decoration: none;
 }
 
-.link:hover {
+a:hover {
     text-decoration: underline;
-    color: rgb(0, 175, 244);
     cursor: pointer;
 }
 

@@ -1,6 +1,7 @@
 import "./RegisterPage.css";
 import Chevron from "../SVGs/Chevron";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const Select = ({ className }) => {
   return (
@@ -57,7 +58,9 @@ const RegisterPage = () => {
             </button>
           </div>
           <div className="margintop20">
-            <div className="register-loginlink link">Already have an account?</div>
+            <Link to="/login" className="register-loginlink">
+              Already have an account?
+            </Link>
           </div>
         </section>
       </form>
