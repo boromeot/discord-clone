@@ -5,17 +5,23 @@ import { Link } from "react-router-dom";
 
 const Select = ({ className }) => {
   return (
-    <div className={className}>
-      <div className="select-option">
-        <div className="select-textWrapper">
-          <div className="select-text">Janurary</div>
-          <input className="select-input"/>
+    <>
+      <div className={className}>
+        <div className="select-option">
+          <div className="select-textWrapper">
+            <div className="select-text"></div>
+            <input className="select-input"/>
+          </div>
+          <div className="select-chevron">
+            <Chevron />
+          </div>
         </div>
-        <div className="select-chevron">
-          <Chevron />
+        <div className="dropdown">
+        
         </div>
       </div>
-    </div>
+      
+    </>
   )
 }
 
@@ -47,9 +53,9 @@ const RegisterPage = () => {
           <fieldset> 
             <legend className="register-label">Date of birth</legend>
             <div className="register-dropdowns">
-              <Select className="month register-select"/>
-              <Select className="day register-select"/>
-              <Select className="year register-select"/>
+              <Select className="month"/>
+              <Select className="day"/>
+              <Select className="year"/>
             </div>
           </fieldset>
           <div className="margintop20">
