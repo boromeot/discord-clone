@@ -1,5 +1,6 @@
 import "./LoginPage.css";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 const LoginPage = () => {
 
@@ -8,7 +9,6 @@ const LoginPage = () => {
 
   const login = async e => {
     e.preventDefault();
-    console.log('login clicked');
     const res = await fetch('http://localhost:3001/Login', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -17,7 +17,6 @@ const LoginPage = () => {
         password
       })
     }); 
-
     const data = await res.json();
 	}
 
@@ -50,7 +49,7 @@ const LoginPage = () => {
 						</button>
 						<div className="login-register">
 							Need an account?
-							<span className="login-registerlink link">Register</span>
+							<Link to="/register" className="login-registerlink">Register</Link>
 						</div>
 					</div>
 				</section>

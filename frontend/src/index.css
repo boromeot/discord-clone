@@ -25,8 +25,14 @@ html, body, #root {
     justify-content: center;
 }
 
-.link:hover {
+a {
+    color: rgb(0, 175, 244);
+    text-decoration: none;
+}
+
+a:hover {
     text-decoration: underline;
+    cursor: pointer;
 }
 
 fieldset {
