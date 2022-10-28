@@ -22,8 +22,10 @@ for (let i = 2019; i >= 1870; i--) {
 }
 
 const Select = ({ className="", options=[], input, setInput }) => {
+  const [show, setShow] = useState(false);
+
   return (
-      <div className={className}>
+      <div className={className} onClick={() => setShow(prev => !prev)}>
         <div className="select-option">
           <div className="select-textWrapper">
             <div className="select-text">{ input }</div>
@@ -33,13 +35,13 @@ const Select = ({ className="", options=[], input, setInput }) => {
             <Chevron />
           </div>
         </div>
-        <div className="dropdown">
+        {show && <div className="dropdown">
           {options.map(option => {
             return (
               <div className="dropdown-option" onClick={() => setInput(option)}>{option}</div>
             )
           })}
-        </div>
+        </div>}
       </div>
   )
 }
