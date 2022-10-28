@@ -3,9 +3,32 @@ import Chevron from "../SVGs/Chevron";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
-const Select = ({ className }) => {
+const MONTHS = 
+['January', 'Febuary', 'March', 'April',
+ 'May', 'June', 'July', 'August',
+ 'September', 'October', 'November', 'December'
+];
+
+const DAYS = [];
+
+for (let i = 1; i <= 31; i++) {
+  DAYS.push(i);
+}
+
+const YEARS = [];
+
+for (let i = 1870; i <= 2022; i++) {
+  YEARS.push(i);
+}
+
+const DropDownOption = ({ name }) => {
   return (
-    <>
+    <div className="dropdown-option">{ name }</div>
+  )
+}
+
+const Select = ({ className="", options=[] }) => {
+  return (
       <div className={className}>
         <div className="select-option">
           <div className="select-textWrapper">
@@ -17,19 +40,13 @@ const Select = ({ className }) => {
           </div>
         </div>
         <div className="dropdown">
-          <div className="dropdown-option">Janurary</div>
-          <div className="dropdown-option">Janurary</div>
-          <div className="dropdown-option">Janurary</div>
-          <div className="dropdown-option">Janurary</div>
-          <div className="dropdown-option">Janurary</div>
-          <div className="dropdown-option">Janurary</div>
-          <div className="dropdown-option">Janurary</div>
-          <div className="dropdown-option">Janurary</div>
-          <div className="dropdown-option">Janurary</div>
+          {options.map(option => {
+            return (
+              <DropDownOption name={option} />
+            )
+          })}
         </div>
       </div>
-      
-    </>
   )
 }
 
@@ -37,9 +54,6 @@ const RegisterPage = () => {
   const [password, setPassword] = useState('');
   const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
-  const [month, setMonth] = useState('');
-  const [day, setDay] = useState('');
-  const [year, setYear] = useState('');
 
   return (
     <div className="regsiterpage">
@@ -61,9 +75,9 @@ const RegisterPage = () => {
           <fieldset> 
             <legend className="register-label">Date of birth</legend>
             <div className="register-dropdowns">
-              <Select className="month"/>
-              <Select className="day"/>
-              <Select className="year"/>
+              <Select className="month" options={MONTHS} />
+              <Select className="day" options={DAYS} />
+              <Select className="year" options={YEARS} />
             </div>
           </fieldset>
           <div className="margintop20">

@@ -183,17 +183,16 @@
 }
 
 .dropdown-option {
-  background-color: var(--background-modifier-hover);
-  color: var(--interactive-hover);
+  color: rgb(185, 187, 190);
   cursor: pointer;
   display: flex;
-  font-size: inherit;
+  font-family: var(--font-primary);
+  font-weight: 600;
   padding: 12px;
   width: 100%;
-  user-select: none;
-  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
-  box-sizing: border-box;
-  -webkit-box-align: center;
-  align-items: center;
   min-height: 40px;
+}
+
+.dropdown-option:hover {
+  background-color: rgba(79, 84, 92, .4);
 }
