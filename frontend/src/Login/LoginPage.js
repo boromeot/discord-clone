@@ -9,7 +9,6 @@ const LoginPage = () => {
 
   const login = async e => {
     e.preventDefault();
-    console.log('login clicked');
     const res = await fetch('http://localhost:3001/Login', {
       method: 'POST',
       headers: {'Content-Type': 'application/json'},
@@ -18,7 +17,6 @@ const LoginPage = () => {
         password
       })
     }); 
-
     const data = await res.json();
 	}
 

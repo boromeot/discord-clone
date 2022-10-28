@@ -8,14 +8,12 @@ const MONTHS =
  'May', 'June', 'July', 'August',
  'September', 'October', 'November', 'December'
 ];
-
 const DAYS = [];
+const YEARS = [];
 
 for (let i = 1; i <= 31; i++) {
   DAYS.push(i);
 }
-
-const YEARS = [];
 
 for (let i = 2019; i >= 1870; i--) {
   YEARS.push(i);
@@ -23,7 +21,7 @@ for (let i = 2019; i >= 1870; i--) {
 
 const Select = ({ className="", options=[], input, setInput }) => {
   const [show, setShow] = useState(false);
-
+  
   return (
       <div className={className} onClick={() => setShow(prev => !prev)}>
         <div className="select-option">
@@ -47,12 +45,29 @@ const Select = ({ className="", options=[], input, setInput }) => {
 }
 
 const RegisterPage = () => {
-  const [password, setPassword] = useState('');
-  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const [month, setMonth] = useState('');
   const [day, setDay] = useState('');
   const [year, setYear] = useState('');
+
+  const register = async e => {
+    e.preventDefault();
+    const res = await fetch('http://localhost:3001/Register', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        email,
+        username,
+        password,
+        month,
+        day,
+        year
+      })
+    });
+    const data = await res.json();
+  }
 
   return (
     <div className="regsiterpage">
@@ -80,7 +95,7 @@ const RegisterPage = () => {
             </div>
           </fieldset>
           <div className="margintop20">
-            <button className="register-button">
+            <button className="register-button" onClick={e => {register(e)}}>
               <div>Continue</div>
             </button>
           </div>
