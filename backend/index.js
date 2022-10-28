@@ -10,6 +10,7 @@ const LoginModel = require('./models/Login');
 
 const bcrypt = require('bcrypt');
 const cors = require('cors');
+const RegisterModel = require('./models/Register');
 
 app.use(express.json());
 app.use(cors());
@@ -35,7 +36,7 @@ app.post("/User", async (req, res) => {
 });
 
 app.post("/login", async (req, res) => {
-    let {email, password} = req.body;
+    const {email, password} = req.body;
 
     const salt = bcrypt.genSaltSync(10);
     const hash = bcrypt.hashSync(password, salt);
@@ -48,6 +49,31 @@ app.post("/login", async (req, res) => {
 
     res.json(login);
 });
+
+app.post("/register", async (req, res) => {
+    const {
+        email,
+        username,
+        password,
+        month,
+        day,
+        year
+    } = req.body;
+
+    const salt = bcrypt.genSaltSync(10);
+    const hashedPassword = bcrypt.hashSync(password, salt);
+    const login = {
+        email,
+        username,
+        hashedPassword,
+        month,
+        day,
+        year
+    };
+    const newLogin = new RegisterModel(login);
+    await newLogin.save();
+    res.json(login);
+})
 
 app.listen(3001, () => {
     console.log('server running!');
