@@ -18,17 +18,14 @@ const RegisterSchema = new mongoose.Schema({
   },
   month: {
     type: String,
-    unique: true,
     required: true,
   },
   day: {
     type: Number,
-    unique: true,
     required: true,
   },
   year: {
     type: Number,
-    unique: true,
     required: true,
   }
 });
